@@ -4,10 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "scripts": {
+ 
     "create-secret-dir": "mkdir -p secret",
+    "port-emulate": "sh port/portemulator.sh",
+    "port-command": "sh port/portcommand.sh",
     "start": "node app.js"
-}
+
 
   },
   "keywords": [],
