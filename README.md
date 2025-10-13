@@ -5,8 +5,8 @@ A web-based application designed to validate QR codes for access control systems
 ## Features
 
 - **QR Code Scanning**: Quickly scan QR codes from a physical scanner to verify ticket codes over a serial port.
-  **Pretix integration**: Tickets are validated against the events in Pretix
-  **Flexible business logic**: Set business rules on multiple scans and events
+- **Pretix integration**: Tickets are validated against the events in Pretix
+- **Flexible business logic**: Set business rules on multiple scans and events
 - **Real-Time Validation**: Instant feedback on the validity of scanned codes.
 - **(TBC)User-Friendly Interface**: Intuitive design for seamless user experience.
 
