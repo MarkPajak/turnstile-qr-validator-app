@@ -12,7 +12,7 @@ secret/
 
 !package.json
 !package-loack.json
-
+!secret_template.json
 
 
 
