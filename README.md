@@ -12,7 +12,7 @@ A web-based application designed to validate QR codes for access control systems
 
 ## Tech Stack
 
-- **Frontend tbc**: HTML, CSS, JavaScript
+- **Frontend (tbc)**: HTML, CSS, JavaScript
 - **Backend**: Node.js (Express.js)
 - **Database**: MongoDB
 - **APi connections**: [pretix](https://docs.pretix.eu/dev/api/index.html) for ticket validation
