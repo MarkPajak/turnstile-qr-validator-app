@@ -19,8 +19,9 @@ A web-based application designed to validate QR codes for access control systems
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+- Node.js (v18 or higher)
+- npm (v10.8.2 or higher)
+- Mongod (v4.4.18)
 
 ### Steps to install and test a ticket
 
