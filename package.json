@@ -4,7 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scripts": {
+    "create-secret-dir": "mkdir -p secret",
+    "start": "node app.js"
+}
+
   },
   "keywords": [],
   "author": "",
