@@ -6,6 +6,7 @@
   "scripts": {
  
     "create-secret-dir": "mkdir -p secret",
+    "setup": "node scripts/setup_secret.js",
     "port-emulate": "sh port/portemulator.sh",
     "port-command": "sh port/portcommand.sh",
     "start": "node app.js"
