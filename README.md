@@ -29,3 +29,16 @@ A web-based application designed to validate QR codes for access control systems
    ```bash
    git clone https://github.com/MarkPajak/turnstile-qr-validator-app.git
    cd turnstile-qr-validator-app
+
+2. run npm install
+   npm run setup
+   npm start
+
+4. in a  new terminal on the same directory
+   npm run port-emulate
+
+5. in a  new terminal on the same directory
+   npm run port-commant
+   
+   
+   
