@@ -1,0 +1,82 @@
+const fs = require('fs');
+const path = require('path');
+
+const walkDir = (dir, filelist = []) => {
+  fs.readdirSync(dir).forEach(file => {
+    const filepath = path.join(dir, file);
+    if (fs.statSync(filepath).isDirectory()) {
+      if (file === 'node_modules') return; // Skip node_modules
+      walkDir(filepath, filelist);
+    } else if (file.endsWith('.js') || file.endsWith('.ts')) {
+      filelist.push(filepath);
+    }
+  });
+  return filelist;
+};
+
+const getPackagesFromFile = (filepath) => {
+  const content = fs.readFileSync(filepath, 'utf8');
+  const requireRegex = /require\(['"]([^'"]+)['"]\)/g;
+  const importRegex = /import\s+(?:.+?\s+from\s+)?['"]([^'"]+)['"]/g;
+  const packages = new Set();
+
+  let match;
+  while ((match = requireRegex.exec(content)) !== null) {
+    if (!match[1].startsWith('.') && !match[1].startsWith('/')) {
+      packages.add(match[1].split('/')[0]); // handle scoped packages
+    }
+  }
+  while ((match = importRegex.exec(content)) !== null) {
+    if (!match[1].startsWith('.') && !match[1].startsWith('/')) {
+      packages.add(match[1].split('/')[0]);
+    }
+  }
+
+  return Array.from(packages);
+};
+
+const packageJsonPath = path.join(process.cwd(), 'package.json');
+if (!fs.existsSync(packageJsonPath)) {
+  console.error('No package.json found in current directory.');
+  process.exit(1);
+}
+
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+packageJson.dependencies = packageJson.dependencies || {};
+
+const jsFiles = walkDir(process.cwd());
+
+// Collect all used packages from source files
+const usedPackagesSet = new Set();
+jsFiles.forEach(file => {
+  const pkgs = getPackagesFromFile(file);
+  pkgs.forEach(pkg => usedPackagesSet.add(pkg));
+});
+
+const declaredDeps = packageJson.dependencies;
+
+// Find missing packages (used but not declared)
+const missingPackages = Array.from(usedPackagesSet).filter(pkg => !(pkg in declaredDeps));
+
+// Find unused packages (declared but not used)
+const unusedPackages = Object.keys(declaredDeps).filter(pkg => !usedPackagesSet.has(pkg));
+
+// Add missing packages with version "*"
+missingPackages.forEach(pkg => {
+  console.log(`Adding missing dependency: ${pkg}`);
+  declaredDeps[pkg] = "*";
+});
+
+// Remove unused packages
+unusedPackages.forEach(pkg => {
+  console.log(`Removing unused dependency: ${pkg}`);
+  delete declaredDeps[pkg];
+});
+
+if (missingPackages.length > 0 || unusedPackages.length > 0) {
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  console.log(`Updated package.json with ${missingPackages.length} added and ${unusedPackages.length} removed dependencies.`);
+  console.log('Remember to run `npm install` to sync installed packages.');
+} else {
+  console.log('No changes needed. package.json dependencies are up to date.');
+}

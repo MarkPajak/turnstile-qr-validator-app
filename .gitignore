@@ -10,6 +10,12 @@ secret/
 .DS_Store
 *.log
 
+!package.json
+!package-loack.json
+
+
+
+
 
 node_modules/
 secret/
