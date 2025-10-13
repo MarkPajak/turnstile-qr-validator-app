@@ -25,24 +25,25 @@ A web-based application designed to validate QR codes for access control systems
 
 ### Steps to install and test a ticket
 
-1. Clone the repository:
+1. Clone the repository and install
 
    ```bash
    git clone https://github.com/MarkPajak/turnstile-qr-validator-app.git
    cd turnstile-qr-validator-app
+   npm install
 
-2. run npm install:
+2. Setup secret folder and api_key:
 
    ```bash
    npm run setup
    npm run port-emulate
 
-4. start the app
+3. Start the app
 
     ```bash
    npm start
 
-6. in a  new terminal on the same directory:
+4. in a  new terminal on the same directory:
 
    ```bash
    npm run port-command
