@@ -39,7 +39,7 @@ A web-based application designed to validate QR codes for access control systems
 
    ```bash
    npm run setup
-   npm run socat
+   npm run install-socat
    npm run port-emulate
 
 3. Setup secret folder and api_key:
