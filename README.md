@@ -10,10 +10,10 @@ A web-based application designed to validate QR codes for access control systems
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend tbc**: HTML, CSS, JavaScript
 - **Backend**: Node.js (Express.js)
-- **Database**: SQLite
-- **Libraries**: [pretix](https://github.com/pretix/pretix) for ticket validation
+- **Database**: MongoDB
+- **APi connections**: [pretix](https://docs.pretix.eu/dev/api/index.html) for ticket validation
 
 ## Installation
 
@@ -22,7 +22,7 @@ A web-based application designed to validate QR codes for access control systems
 - Node.js (v14 or higher)
 - npm (v6 or higher)
 
-### Steps
+### Steps to install and test a ticket
 
 1. Clone the repository:
 
