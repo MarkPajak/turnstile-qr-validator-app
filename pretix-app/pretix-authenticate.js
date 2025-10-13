@@ -9,7 +9,7 @@ api key is configured in the secrets folder and this is per team
 
 
 var fs = require('fs');
-var keys=JSON.parse(fs.readFileSync('./secret/pretix_settings.JSON').toString());
+var keys=JSON.parse(fs.readFileSync('./secret/pretix_settings.json').toString());
 var self = this
 self.valid_tickets=[]
 var request = require('request');

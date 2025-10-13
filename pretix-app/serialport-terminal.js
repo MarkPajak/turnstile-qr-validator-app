@@ -7,7 +7,7 @@ const Save_csv = require('./save-csv.js');
 const save_csv = new Save_csv();
 
 //const keys = JSON.parse(fs.readFileSync('./secret/api_keys.JSON').toString());
-const settings = JSON.parse(fs.readFileSync('./secret/pretix_settings.JSON').toString());
+const settings = JSON.parse(fs.readFileSync('./secret/pretix_settings.json').toString());
 
 const eventCheckinList = settings.eventCheckinList;
 
@@ -223,7 +223,8 @@ function listenData() {
      
 
       const result = globalBuffer.replace("R2:", "").trim();
-console.log('ersult.length:',result.length )
+console.log('result.length:',result.length )
+console.log('result:',result )
       if (result.length ==32) {
         console.log("Pretix ticket detected");
         simulate(result);
