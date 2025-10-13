@@ -9,7 +9,8 @@
     "setup": "node scripts/setup_secret.js",
     "port-emulate": "sh port/portemulator.sh",
     "port-command": "sh port/portcommand.sh",
-    "check-socat": "command -v socat || (echo '❌ socat is not installed.' && exit 1)"
+    "check-socat": "command -v socat || (echo '❌ socat is not installed.' && exit 1)",
+   "install-socat": "sh scripts/socat.js",
     "start": "node app.js"
 
 
