@@ -6,7 +6,7 @@ A web-based application designed to validate QR codes for access control systems
 
 - **QR Code Scanning**: Quickly scan QR codes to verify access permissions.
 - **Real-Time Validation**: Instant feedback on the validity of scanned codes.
-- **User-Friendly Interface**: Intuitive design for seamless user experience.
+- **(TBC)User-Friendly Interface**: Intuitive design for seamless user experience.
 
 ## Tech Stack
 
