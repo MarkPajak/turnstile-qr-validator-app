@@ -41,12 +41,16 @@ A web-based application designed to validate QR codes for access control systems
    npm run setup
    npm run port-emulate
 
-3. Start the app in a new terminal window
+3. Setup secret folder and api_key:
+
+   add pretix API key to settings/pretix_settings.json
+
+5. Start the app in a new terminal window
 
     ```bash
    npm start
 
-4. run a test tickwet in a new terminal window
+6. run a test tickwet in a new terminal window
 
    ```bash
    npm run port-command
