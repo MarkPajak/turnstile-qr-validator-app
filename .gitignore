@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Secrets
+secret/
+*.env
+*.json
+
+# System files (optional)
+.DS_Store
+*.log
+
+
+node_modules/
+secret/
