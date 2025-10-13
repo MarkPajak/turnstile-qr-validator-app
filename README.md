@@ -1,50 +1,31 @@
-Turnstile QR Validator App
+# Turnstile QR Validator App
 
 A web-based application designed to validate QR codes for access control systems, ensuring secure and efficient entry management.
 
-Features
+## Features
 
-QR Code Scanning: Quickly scan QR codes to verify access permissions.
+- **QR Code Scanning**: Quickly scan QR codes to verify access permissions.
+- **Real-Time Validation**: Instant feedback on the validity of scanned codes.
+- **User-Friendly Interface**: Intuitive design for seamless user experience.
 
-Real-Time Validation: Instant feedback on the validity of scanned codes.
+## Tech Stack
 
-User-Friendly Interface: Intuitive design for seamless user experience.
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js (Express.js)
+- **Database**: SQLite
+- **Libraries**: [pretix](https://github.com/pretix/pretix) for ticket validation
 
-Tech Stack
+## Installation
 
-Frontend: HTML, CSS, JavaScript
+### Prerequisites
 
-Backend: Node.js (Express.js)
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-Database: mongoDB
+### Steps
 
-Libraries: pretix
- for ticket validation
+1. Clone the repository:
 
-Installation
-Prerequisites
-
-Node.js (v14 or higher)
-
-npm (v6 or higher)
-
-Steps
-
-Clone the repository:
-
-git clone https://github.com/MarkPajak/turnstile-qr-validator-app.git
-cd turnstile-qr-validator-app
-
-
-Install dependencies:
-
-npm install
-
-
-Contributing
-
-Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your proposed changes.
-
-License
-
-This project is licensed under the MIT License.
+   ```bash
+   git clone https://github.com/MarkPajak/turnstile-qr-validator-app.git
+   cd turnstile-qr-validator-app
