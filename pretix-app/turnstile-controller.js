@@ -23,7 +23,7 @@ self.connect = async function(port, cb) {
     const valid_tickets_from_file = new ValidTicketsFile();
 
     valid_tickets_from_file.load_tickets((tickets) => {
-      console.log('      |/   \\|');
+      console.log('     |/   \\|');
       console.log('      \\()//');
       console.log('    //(  )\\');
       console.log('    |\\ "" /|');

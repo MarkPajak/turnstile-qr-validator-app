@@ -6,7 +6,7 @@ const path = require('path');
 const mongoUrl = 'mongodb://localhost:27017';
 const dbName = 'tickets';
 const collectionName = 'myCollectionName';
-const outputFile = path.join(__dirname, 'ticket_files', 'scan_data.csv');
+const outputFile = './ticket_files/scan_data.csv';
 
 const save_csv = function () {
     const self = this;

@@ -10,7 +10,7 @@
     "port-emulate": "sh port/portemulator.sh",
     "port-command": "sh port/portcommand.sh",
     "check-socat": "command -v socat || (echo '❌ socat is not installed.' && exit 1)",
-   "install-socat": "sh scripts/socat.js",
+   "install-socat": "sh scripts/socat",
     "start": "node app.js"
 
 

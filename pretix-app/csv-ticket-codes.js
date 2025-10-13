@@ -9,7 +9,7 @@ const _ = require('underscore');
 class ValidTicketsFile {
   constructor() {
     this.valid_tickets = [];
-    this.inputFile = './ticket_files/tickets.csv';
+    this.inputFile = './ticket_files/scan_data.csv';
   }
 
   load_tickets(cb) {

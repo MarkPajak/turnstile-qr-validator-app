@@ -137,7 +137,7 @@ if (process.env.machine === "turnstile") {
         });
       });
       console.log("✅ Turnstile controller connected and ticket data loaded.");
-      console.log('port_control:', port_control);
+   //   console.log('port_control:', port_control);
 
       port_control.listenData();  // now this should work without error
     } catch (error) {

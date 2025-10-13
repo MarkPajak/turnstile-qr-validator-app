@@ -8,7 +8,7 @@ const database_connect = function () {
   self.connect = async function () {
     let client;
     try {
-      client = await MongoClient.connect(url, { useUnifiedTopology: true });
+      client = await MongoClient.connect(url);
       console.log('[DB] Connected to MongoDB');
 
       const db = client.db(dbName);
