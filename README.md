@@ -33,15 +33,18 @@ A web-based application designed to validate QR codes for access control systems
 
 2. run npm install:
 
+   ```bash
    npm run setup
    npm run port-emulate
 
-3. start the app
+4. start the app
 
+    ```bash
    npm start
 
-4. in a  new terminal on the same directory:
+6. in a  new terminal on the same directory:
 
+   ```bash
    npm run port-command
    
    
