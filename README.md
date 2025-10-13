@@ -41,12 +41,12 @@ A web-based application designed to validate QR codes for access control systems
    npm run setup
    npm run port-emulate
 
-3. Start the app
+3. Start the app in a new terminal window
 
     ```bash
    npm start
 
-4. in a  new terminal on the same directory:
+4. run a test tickwet in a new terminal window
 
    ```bash
    npm run port-command
