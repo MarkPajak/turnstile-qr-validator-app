@@ -35,7 +35,7 @@ A web-based application designed to validate QR codes for access control systems
    cd turnstile-qr-validator-app
    npm install
 
-2. Setup secret folder and api_key:
+2. Setup secret folder and port emulator:
 
    ```bash
    npm run setup
