@@ -51,7 +51,7 @@ A web-based application designed to validate QR codes for access control systems
     ```bash
    npm start
 
-6. run a test tickwet in a new terminal window
+6. run a test ticket in a new terminal window
 
    ```bash
    npm run port-command
