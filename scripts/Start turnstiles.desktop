@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Startup Terminal
+Exec=gnome-terminal -- bash -c "/home/user/Desktop/live/turnstile-qr-validator-app/scripts/start.sh; exec bash"
+Terminal=false
+X-GNOME-Autostart-enabled=true
