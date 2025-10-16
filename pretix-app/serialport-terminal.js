@@ -26,7 +26,7 @@ const openOptions = {
   dataBits: settings.dataBits || 8,
   parity: settings.parity || 'none',
   stopBits: settings.stopBits || 1,
-  path: settings.serialPort || '/tmp/ttyV0'   // Use the virtual port
+  path: settings.serialPort || '/dev/ttyS0'   // Use the virtual port
 };
 
 function logAccessAttempt(data) {

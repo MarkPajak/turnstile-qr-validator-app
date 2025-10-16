@@ -21,8 +21,8 @@ var _ = require('underscore');
 var pretix_token=keys.api_token
 
 
-var checkinlist = keys.eventCheckinList[1].checkinlist_id
-var event_name =  keys.eventCheckinList[1].event_name
+var checkinlist = keys.eventCheckinList[0].checkinlist_id
+var event_name =  keys.eventCheckinList[0].event_name
 const eventCheckinList = keys.eventCheckinList
 
 
@@ -41,6 +41,7 @@ function fetchTickets(url) {
         try {
           resolve(JSON.parse(data));
         } catch (err) {
+        	console.log("[fetchTickets] ",err)
           reject(err);
         }
       });
