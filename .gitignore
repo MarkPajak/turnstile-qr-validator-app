@@ -5,6 +5,7 @@ node_modules/
 secret/
 *.env
 *.json
+*.csv
 
 # System files (optional)
 .DS_Store
